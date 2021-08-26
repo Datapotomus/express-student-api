@@ -56,7 +56,7 @@ const studentController = {
   },
 
   update: function (req, res) {
-    let found = students.find((student) => student.id === parseInt(req.params.id))
+    let found = students.find((student) => student.id == req.params.id)
 
     //if we found the student, update then return it otherwise return a 404
     if (found) {
