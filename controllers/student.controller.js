@@ -37,7 +37,7 @@ const studentController = {
   },
 
   findById: function (req, res) {
-    const found = students.find((student) => student.id === parseInt(req.params.id))
+    const found = students.find((student) => student.id == req.params.id)
 
     //if we found the student return it otherwise return a 404
     if (found) {
