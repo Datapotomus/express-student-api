@@ -68,7 +68,7 @@ const studentController = {
   },
 
   delete: function (req, res) {
-    const foundIndex = students.findIndex((student) => student.id === parseInt(req.params.id))
+    const foundIndex = students.findIndex((student) => student.id == req.params.id)
 
     //if we found the studens position (index), remove it and then return all students return a 404
     if (foundIndex !== -1) {
