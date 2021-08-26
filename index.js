@@ -1,8 +1,14 @@
 //import/require express so we can use it to create our application
 const express = require("express");
 
+//import cors so we can use it to allow requests to our api from specific sources
+const cors = require('cors');
+
 //run express to create an express app and store it in the variable named app
 const app = express();
+
+//turn on cors
+app.use( cors() )
 
 //let express know that it is going to get JSON sent to it at some point in a request
 app.use(express.json());
