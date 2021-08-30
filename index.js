@@ -14,7 +14,7 @@ app.use( cors() )
 app.use(express.json());
 
 //creating a variable represents the port we want our app to listen on
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // add a default route
 app.get('/', function (req, res) {
